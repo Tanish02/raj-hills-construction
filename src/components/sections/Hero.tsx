@@ -23,13 +23,22 @@ export default function Hero() {
           development, delivering quality projects with integrity and precision.
         </p>
         {/* CTA Button */}
+        <div className="mt-8 flex gap-4">
+          <a
+            href="tel:919560961031"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition"
+          >
+            Call Now
+          </a>
+          <a
+            href="https://wa.me/919560961031"
+            target="_blank"
+            className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
-
-      <h2 className="text-3xl font-semibold mb-4">Hero</h2>
-      <p className="text-gray-600">
-        Raj Hills Construction is a trusted name in residential and commercial
-        development.
-      </p>
     </section>
   );
 }
