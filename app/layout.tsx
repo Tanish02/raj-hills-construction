@@ -2,12 +2,6 @@ import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 
-export const metadata = {
-  title: "Raj Hills Construction | Builders & Developers",
-  description:
-    "Trusted residential and commercial construction company delivering quality projects.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-black text-white">
         <Navbar />
         {children}
         <Footer />
@@ -23,3 +17,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// end code

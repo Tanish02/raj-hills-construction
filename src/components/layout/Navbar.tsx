@@ -2,6 +2,7 @@
 
 import scrollToSection from "@/components/utils/scrollToSection";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const sections = [
@@ -52,11 +53,15 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <button
-          onClick={() => handleNav("home")}
-          className="text-white font-semibold text-lg"
-        >
-          Raj Hills
+        <button onClick={() => handleNav("home")} className="flex items-center">
+          <Image
+            src="/logo-text.svg"
+            alt="Raj Hills Constructions"
+            width={160}
+            height={36}
+            priority
+            className="h-8 md:h-9 w-auto"
+          />
         </button>
 
         {/* Desktop Menu */}
