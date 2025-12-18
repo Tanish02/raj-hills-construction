@@ -1,9 +1,10 @@
-import { company } from "@/data/company";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Header */}
         <div className="max-w-2xl mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-white">
@@ -15,42 +16,59 @@ export default function Contact() {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
           {/* Phone */}
-          <div className="border border-white/10 rounded-lg p-6">
-            <h3 className="text-lg font-medium text-white mb-2">Phone</h3>
+          <div className="border border-white/10 rounded-lg p-6 hover:border-orange-500 transition">
+            <div className="flex items-center gap-3 text-white">
+              <Phone className="w-6 h-6 text-orange-500" />
+              <h3 className="text-lg font-medium">Phone</h3>
+            </div>
+
+            <p className="mt-3 text-gray-400 text-sm">
+              Call us directly for project inquiries
+            </p>
+
             <a
-              href={`tel:${company.phone}`}
-              className="text-orange-400 hover:underline"
+              href="tel:+919560961031"
+              className="inline-block mt-4 text-orange-500 font-medium hover:underline"
             >
-              {company.phone}
+              +91 95609 61031
             </a>
           </div>
 
           {/* WhatsApp */}
-          <div className="border border-white/10 rounded-lg p-6">
-            <h3 className="text-lg font-medium text-white mb-2">WhatsApp</h3>
+          <div className="border border-white/10 rounded-lg p-6 hover:border-orange-500 transition">
+            <div className="flex items-center gap-3 text-white">
+              <MessageCircle className="w-6 h-6 text-orange-500" />
+              <h3 className="text-lg font-medium">WhatsApp</h3>
+            </div>
+
+            <p className="mt-3 text-gray-400 text-sm">
+              Quick responses on WhatsApp
+            </p>
+
             <a
-              href={`https://wa.me/${company.whatsapp.replace("+", "")}`}
+              href="https://wa.me/919560961031"
               target="_blank"
-              className="text-orange-400 hover:underline"
+              className="inline-block mt-4 text-orange-500 font-medium hover:underline"
             >
               Chat on WhatsApp
             </a>
           </div>
 
           {/* Address */}
-          <div className="border border-white/10 rounded-lg p-6">
-            <h3 className="text-lg font-medium text-white mb-2">Address</h3>
-            <p className="text-gray-400">{company.address}</p>
+          <div className="border border-white/10 rounded-lg p-6 hover:border-orange-500 transition">
+            <div className="flex items-center gap-3 text-white">
+              <MapPin className="w-6 h-6 text-orange-500" />
+              <h3 className="text-lg font-medium">Address</h3>
+            </div>
+
+            <p className="mt-3 text-gray-400 text-sm">
+              Delhi, India
+            </p>
           </div>
-        </div>
-        <div className="mt-16 border border-white/10 rounded-lg overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps?q=NewDelhi&output=embed"
-            className="w-full h-80"
-            loading="lazy"
-          />
+
         </div>
       </div>
     </section>
