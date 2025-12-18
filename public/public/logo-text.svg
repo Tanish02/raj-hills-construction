@@ -1,0 +1,32 @@
+<svg
+  width="220"
+  height="40"
+  viewBox="0 0 220 40"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <text
+    x="0"
+    y="26"
+    fill="white"
+    font-size="26"
+    font-weight="700"
+    font-family="Arial, Helvetica, sans-serif"
+    letter-spacing="1"
+  >
+    RAJ HILLS
+  </text>
+
+  <text
+    x="0"
+    y="38"
+    fill="#F97316"
+    font-size="10"
+    letter-spacing="2"
+    font-family="Arial, Helvetica, sans-serif"
+  >
+    CONSTRUCTIONS
+  </text>
+</svg>
+
+
+// end code
