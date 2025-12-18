@@ -1,13 +1,23 @@
 "use client";
 
 import scrollToSection from "@/components/utils/scrollToSection";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const sections = ["home", "about", "services", "projects", "contact"];
+const sections = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "projects", label: "Projects" },
+  { id: "gallery", label: "Gallery" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
+  const [open, setOpen] = useState(false);
 
+  // Scroll spy
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,18 +27,21 @@ export default function Navbar() {
           }
         });
       },
-      {
-        rootMargin: "-50% 0px -50% 0px",
-      }
+      { rootMargin: "-50% 0px -50% 0px" }
     );
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
+    sections.forEach((s) => {
+      const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
   }, []);
+
+  const handleNav = (id: string) => {
+    scrollToSection(id);
+    setOpen(false); // close mobile menu
+  };
 
   const linkClass = (id: string) =>
     `cursor-pointer transition ${
@@ -36,50 +49,53 @@ export default function Navbar() {
     } hover:text-orange-400`;
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur border-b border-white/10 z-50">
+    <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <button
-          onClick={() => scrollToSection("home")}
+          onClick={() => handleNav("home")}
           className="text-white font-semibold text-lg"
         >
           Raj Hills
         </button>
 
-        {/* Links */}
-        <ul className="flex gap-6">
-          <li
-            onClick={() => scrollToSection("home")}
-            className={linkClass("home")}
-          >
-            Home
-          </li>
-          <li
-            onClick={() => scrollToSection("about")}
-            className={linkClass("about")}
-          >
-            About
-          </li>
-          <li
-            onClick={() => scrollToSection("services")}
-            className={linkClass("services")}
-          >
-            Services
-          </li>
-          <li
-            onClick={() => scrollToSection("projects")}
-            className={linkClass("projects")}
-          >
-            Projects
-          </li>
-          <li
-            onClick={() => scrollToSection("contact")}
-            className={linkClass("contact")}
-          >
-            Contact
-          </li>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6">
+          {sections.map((s) => (
+            <li
+              key={s.id}
+              onClick={() => handleNav(s.id)}
+              className={linkClass(s.id)}
+            >
+              {s.label}
+            </li>
+          ))}
         </ul>
+
+        {/* Mobile Button */}
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </nav>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden bg-black border-t border-white/10">
+          <ul className="flex flex-col px-6 py-4 gap-4">
+            {sections.map((s) => (
+              <li
+                key={s.id}
+                onClick={() => handleNav(s.id)}
+                className={`${linkClass(s.id)} text-lg`}
+              >
+                {s.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
   );
 }
+
+// end code
