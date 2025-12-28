@@ -58,9 +58,9 @@ export default function Navbar() {
             src="/logo-text.svg"
             alt="Raj Hills Constructions"
             width={160}
-            height={36}
+            height={40}
             priority
-            className="h-8 md:h-9 w-auto"
+            className="w-auto h-8 md:h-9"
           />
         </button>
 
