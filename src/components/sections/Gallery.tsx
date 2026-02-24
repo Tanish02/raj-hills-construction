@@ -4,14 +4,15 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = [
-  "/images/gallery-1.jpg",
-  "/images/gallery-2.jpg",
-  "/images/gallery-3.jpg",
-  "/images/gallery-4.jpg",
-];
-
 export default function Gallery() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const images = [
+    "/images/gallery-1.jpg",
+    "/images/gallery-2.jpg",
+    "/images/gallery-3.jpg",
+    "/images/gallery-4.jpg",
+  ];
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const open = (index: number) => setActiveIndex(index);
@@ -115,3 +116,5 @@ export default function Gallery() {
     </section>
   );
 }
+
+//end code
