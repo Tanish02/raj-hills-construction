@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-24 bg-white">
+    <section id="about" className="scroll-mt-24 py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -25,24 +25,24 @@ export default function About() {
 
           {/* Right Stats */}
           <div className="grid grid-cols-2 gap-8">
-            <div className="p-6 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-orange-500">10+</h3>
               <p className="mt-2 text-gray-600 text-sm">
                 Years of Industry Experience
               </p>
             </div>
 
-            <div className="p-6 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-orange-500">Active</h3>
               <p className="mt-2 text-gray-600 text-sm">Company Status</p>
             </div>
 
-            <div className="p-6 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-orange-500">Delhi</h3>
               <p className="mt-2 text-gray-600 text-sm">Registered Location</p>
             </div>
 
-            <div className="p-6 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-orange-500">
                 Quality
               </h3>

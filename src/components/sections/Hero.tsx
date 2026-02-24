@@ -23,7 +23,7 @@ export default function Hero() {
           Delivering Excellence.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-gray-200 text-lg">
+        <p className="mt-6 max-w-2xl space-y-6 text-gray-200 text-lg">
           Raj Hills Construction is a trusted name in residential and commercial
           development, delivering quality projects with integrity and precision.
         </p>
