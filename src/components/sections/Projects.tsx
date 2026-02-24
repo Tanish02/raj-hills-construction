@@ -4,14 +4,14 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 py-24 bg-black">
+    <section id="projects" className="scroll-mt-24 py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* section Header */}
         <div className="max-w-2xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             Our Projects
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-gray-600">
             A selection of residential and commercial projects delivered with
             quality, precision, and trust.
           </p>
@@ -22,7 +22,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group border border-white/10 rounded-lg overflow-hidden"
+              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
             >
               {/* Image section*/}
               <div className="relative h-64">
@@ -35,10 +35,10 @@ export default function Projects() {
               </div>
               {/* Project Info */}
               <div className="p-5">
-                <h3 className="text-lg font-medium text-white">
+                <h3 className="text-lg font-semibold text-gray-900">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-400 mt-1">{project.location}</p>
+                <p className="text-sm text-gray-600 mt-1">{project.location}</p>
               </div>
             </div>
           ))}

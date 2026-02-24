@@ -43,11 +43,13 @@ export default function Gallery() {
   }, [activeIndex]);
 
   return (
-    <section id="gallery" className="py-24 bg-zinc-950">
+    <section id="gallery" className="scroll-mt-24 py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">Gallery</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+          Gallery
+        </h2>
 
-        <p className="text-gray-400 mb-12">
+        <p className="text-gray-600 mb-12">
           A glimpse of our completed and ongoing construction projects.
         </p>
 
@@ -57,7 +59,7 @@ export default function Gallery() {
             <div
               key={index}
               onClick={() => open(index)}
-              className="relative cursor-pointer group overflow-hidden rounded-xl"
+              className="relative cursor-pointer group overflow-hidden rounded-x shadow-md hover:shadow-xl transition duration-300 bg-white"
             >
               <Image
                 src={src}
@@ -73,8 +75,8 @@ export default function Gallery() {
 
       {/* Modal */}
       {activeIndex !== null && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="relative w-[90%] md:w-[60%] lg:w-[50%] bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="relative w-[90%] md:w-[60%] lg:w-[50%] bg-white rounded-2xl overflow-hidden shadow-2xl">
             {/* Close */}
             <button
               onClick={close}
