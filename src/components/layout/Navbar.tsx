@@ -18,7 +18,7 @@ export default function Navbar() {
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
 
-  // Scroll spy
+  // Scroll Spy
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,7 +28,7 @@ export default function Navbar() {
           }
         });
       },
-      { rootMargin: "-50% 0px -50% 0px" }
+      { rootMargin: "-45% 0px -45% 0px" },
     );
 
     sections.forEach((s) => {
@@ -41,16 +41,11 @@ export default function Navbar() {
 
   const handleNav = (id: string) => {
     scrollToSection(id);
-    setOpen(false); // close mobile menu
+    setOpen(false);
   };
 
-  const linkClass = (id: string) =>
-    `cursor-pointer transition ${
-      active === id ? "text-orange-400" : "text-white"
-    } hover:text-orange-400`;
-
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
+    <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => handleNav("home")} className="flex items-center">
@@ -65,40 +60,59 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-8 relative">
           {sections.map((s) => (
-            <li
+            <button
               key={s.id}
               onClick={() => handleNav(s.id)}
-              className={linkClass(s.id)}
+              className="relative text-sm font-medium transition-colors duration-300"
             >
-              {s.label}
-            </li>
-          ))}
-        </ul>
+              <span
+                className={`${
+                  active === s.id ? "text-orange-400" : "text-white"
+                } hover:text-orange-400`}
+              >
+                {s.label}
+              </span>
 
-        {/* Mobile Button */}
+              {/* Animated underline */}
+              <span
+                className={`absolute left-0 -bottom-1 h-0.5 bg-orange-400 transition-all duration-300 ${
+                  active === s.id ? "w-full" : "w-0"
+                }`}
+              />
+            </button>
+          ))}
+        </nav>
+
+        {/* Mobile Toggle */}
         <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black border-t border-white/10">
-          <ul className="flex flex-col px-6 py-4 gap-4">
-            {sections.map((s) => (
-              <li
-                key={s.id}
-                onClick={() => handleNav(s.id)}
-                className={`${linkClass(s.id)} text-lg`}
-              >
-                {s.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-96" : "max-h-0"
+        } bg-black border-t border-white/10`}
+      >
+        <ul className="flex flex-col px-6 py-4 gap-4">
+          {sections.map((s) => (
+            <li
+              key={s.id}
+              onClick={() => handleNav(s.id)}
+              className={`cursor-pointer text-lg transition ${
+                active === s.id
+                  ? "text-orange-400"
+                  : "text-white hover:text-orange-400"
+              }`}
+            >
+              {s.label}
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 }

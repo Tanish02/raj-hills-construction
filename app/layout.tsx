@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className="bg-gradient-to-b from-black via-zinc-950 to-black text-white">
         <Navbar />
         {children}
         <Footer />
