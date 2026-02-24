@@ -2,14 +2,14 @@ import { services } from "@/data/services";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-24 py-24 bg-black">
+    <section id="services" className="scroll-mt-24 py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             Our Services
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-gray-600">
             We provide comprehensive construction services tailored to
             residential and commercial needs.
           </p>
@@ -20,12 +20,12 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-lg p-6 hover:border-orange-500 transition"
+              className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
             >
-              <h3 className="text-xl font-medium text-white mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>

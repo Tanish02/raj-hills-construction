@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
