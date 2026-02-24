@@ -1,3 +1,4 @@
+import scrollToSection from "@/components/utils/scrollToSection";
 import Image from "next/image";
 
 export default function Footer() {
@@ -25,11 +26,36 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-medium mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li
+              onClick={() => scrollToSection("home")}
+              className="cursor-pointer hover:text-orange-500 transition"
+            >
+              Home
+            </li>
+            <li
+              onClick={() => scrollToSection("about")}
+              className="cursor-pointer hover:text-orange-500 transition"
+            >
+              About
+            </li>
+            <li
+              onClick={() => scrollToSection("services")}
+              className="cursor-pointer hover:text-orange-500 transition"
+            >
+              Services
+            </li>
+            <li
+              onClick={() => scrollToSection("projects")}
+              className="cursor-pointer hover:text-orange-500 transition"
+            >
+              Projects
+            </li>
+            <li
+              onClick={() => scrollToSection("contact")}
+              className="cursor-pointer hover:text-orange-500 transition"
+            >
+              Contact
+            </li>
           </ul>
         </div>
 
@@ -52,5 +78,5 @@ export default function Footer() {
 
 // end code
 {
-  /* sample logo for now  */
+  /* temp logo SVG for now   */
 }
