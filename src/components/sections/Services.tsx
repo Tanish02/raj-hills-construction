@@ -6,10 +6,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             Our Services
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-700">
             We provide comprehensive construction services tailored to
             residential and commercial needs.
           </p>
@@ -25,11 +25,11 @@ export default function Services() {
               {/* Animated Accent Line */}
               <span className="absolute left-0 top-0 h-0 w-1 bg-orange-500 transition-all duration-500 group-hover:h-full"></span>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>

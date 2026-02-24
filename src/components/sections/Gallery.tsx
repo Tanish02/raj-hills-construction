@@ -46,11 +46,11 @@ export default function Gallery() {
   return (
     <section id="gallery" className="scroll-mt-24 py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
           Gallery
         </h2>
 
-        <p className="text-gray-600 mb-16 max-w-2xl">
+        <p className="text-gray-700 mb-16 max-w-2xl">
           A glimpse of our completed and ongoing construction projects.
         </p>
 

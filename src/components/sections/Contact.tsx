@@ -11,10 +11,10 @@ export default function Contact() {
         <div className="bg-white rounded-2xl shadow-2xl p-10 md:p-14">
           {/* Header */}
           <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Contact Us
             </h2>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-700">
               Get in touch with us to discuss your residential or commercial
               construction requirements.
             </p>
@@ -35,7 +35,7 @@ export default function Contact() {
 
               <a
                 href="tel:+919560961031"
-                className="inline-block mt-4 text-orange-500 font-semibold hover:underline"
+                className="inline-block mt-4 text-orange-500 font-bold hover:underline"
               >
                 +91 95609 61031
               </a>
@@ -56,7 +56,7 @@ export default function Contact() {
                 href="https://wa.me/919560961031"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-orange-500 font-semibold hover:underline"
+                className="inline-block mt-4 text-orange-500 font-bold hover:underline"
               >
                 Chat on WhatsApp
               </a>
@@ -69,7 +69,7 @@ export default function Contact() {
                 <h3 className="text-lg font-medium text-gray-900">Location</h3>
               </div>
 
-              <p className="mt-3 text-gray-600 text-sm">Delhi, India</p>
+              <p className="mt-3 text-gray-700 text-sm">Delhi, India</p>
             </div>
           </div>
         </div>

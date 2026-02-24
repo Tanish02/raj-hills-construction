@@ -8,10 +8,10 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6">
         {/* section Header */}
         <div className="max-w-2xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Our Projects
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-700">
             A selection of residential and commercial projects delivered with
             quality, precision, and trust.
           </p>
@@ -35,10 +35,10 @@ export default function Projects() {
               </div>
               {/* Project Info */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-bold text-gray-900">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-1">{project.location}</p>
+                <p className="text-sm text-gray-700 mt-1">{project.location}</p>
               </div>
             </div>
           ))}
