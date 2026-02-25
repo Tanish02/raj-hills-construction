@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Gallery() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const images = [
     "/images/gallery-1.jpg",
     "/images/gallery-2.jpg",
@@ -28,7 +27,7 @@ export default function Gallery() {
     setActiveIndex((prev) => (prev! - 1 + images.length) % images.length);
   };
 
-  // ESC key support
+  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
@@ -44,15 +43,19 @@ export default function Gallery() {
   }, [activeIndex]);
 
   return (
-    <section id="gallery" className="scroll-mt-24 py-28 bg-gray-50">
+    <section id="gallery" className="scroll-mt-24 py-28 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-          Gallery
-        </h2>
-
-        <p className="text-gray-700 mb-16 max-w-2xl">
-          A glimpse of our completed and ongoing construction projects.
-        </p>
+        {/* Header */}
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Our Recent Work
+          </h2>
+          <p className="text-gray-400 leading-relaxed">
+            A selection of completed residential and commercial projects,
+            reflecting our commitment to structural precision, durability, and
+            architectural excellence.
+          </p>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,15 +63,22 @@ export default function Gallery() {
             <div
               key={index}
               onClick={() => open(index)}
-              className="relative cursor-pointer group overflow-hidden rounded-x shadow-md hover:shadow-xl transition duration-300 bg-white"
+              className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300"
             >
               <Image
                 src={src}
                 alt="Project"
                 width={600}
                 height={400}
-                className="rounded-xl object-cover w-full h-72 transition-transform duration-500 group-hover:scale-105"
+                className="object-cover w-full h-72 transition-transform duration-500 group-hover:scale-105"
               />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
+                <span className="text-sm tracking-wide opacity-0 group-hover:opacity-100 transition">
+                  View Project
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -76,9 +86,9 @@ export default function Gallery() {
 
       {/* Modal */}
       {activeIndex !== null && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="relative w-[90%] md:w-[60%] lg:w-[50%] bg-white rounded-2xl overflow-hidden shadow-2xl">
-            {/* Close */}
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50">
+          <div className="relative w-[90%] md:w-[60%] lg:w-[50%] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
+            {/* Close Button */}
             <button
               onClick={close}
               className="absolute top-4 right-4 z-10 text-white bg-black/50 p-2 rounded-full hover:bg-orange-500 transition"
@@ -117,4 +127,4 @@ export default function Gallery() {
   );
 }
 
-//end code
+// end code
