@@ -34,7 +34,7 @@ export default function Contact() {
               </p>
 
               <a
-                href="tel:+919560961031"
+                href="tel:+919079976593"
                 className="inline-block mt-4 text-orange-500 font-bold hover:underline"
               >
                 +91 95609 61031
@@ -53,7 +53,7 @@ export default function Contact() {
               </p>
 
               <a
-                href="https://wa.me/919560961031"
+                href="https://wa.me/919079976593"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-orange-500 font-bold hover:underline"

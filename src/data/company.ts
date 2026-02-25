@@ -1,11 +1,9 @@
 export const company = {
   name: "Raj Hills Construction",
-  phone: "+919560961031",
-  whatsapp: "+919560961031",
-  email: "contact@rajhills.com",
+  phone: "+919079976593",
+  whatsapp: "+919079976593",
+  email: "rajhillsconstructions@gmail.com",
   address: "Delhi, India",
 };
 
 //end code
-
-// dummy email

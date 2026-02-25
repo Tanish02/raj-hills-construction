@@ -68,7 +68,7 @@ export default function Footer() {
           <p className="text-sm text-gray-400 mt-2">
             Phone:{" "}
             <a
-              href="tel:+919560961031"
+              href="tel:+919079976593"
               className="text-orange-500 hover:underline"
             >
               +91 95609 61031
@@ -78,13 +78,13 @@ export default function Footer() {
           <p className="text-sm text-gray-400 mt-2">
             Email:{" "}
             <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=rajhillsconstructions@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-orange-500 hover:underline"
->
-  rajhillsconstructions@gmail.com
-</a>
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=rajhillsconstructions@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 hover:underline"
+            >
+              rajhillsconstructions@gmail.com
+            </a>
           </p>
         </div>
       </div>

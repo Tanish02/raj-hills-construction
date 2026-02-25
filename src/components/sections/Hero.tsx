@@ -34,14 +34,14 @@ export default function Hero() {
 
           <div className="mt-8 flex gap-4">
             <a
-              href="tel:+919560961031"
+              href="tel:+919079976593"
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition"
             >
               Call Now
             </a>
 
             <a
-              href="https://wa.me/919560961031"
+              href="https://wa.me/919079976593"
               target="_blank"
               className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition"
             >
