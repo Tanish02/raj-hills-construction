@@ -18,9 +18,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-          Building Trust.
+          Residential & Commercial Construction
           <br />
-          Delivering Excellence.
+          Built with Precision Since 2015.
         </h1>
 
         <p className="mt-6 max-w-2xl space-y-6 text-gray-200 text-lg">

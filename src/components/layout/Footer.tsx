@@ -62,9 +62,29 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-white font-medium mb-4">Contact</h4>
+
           <p className="text-sm text-gray-400">Delhi, India</p>
+
           <p className="text-sm text-gray-400 mt-2">
-            Phone: <span className="text-orange-500">+91 95609 61031</span>
+            Phone:{" "}
+            <a
+              href="tel:+919560961031"
+              className="text-orange-500 hover:underline"
+            >
+              +91 95609 61031
+            </a>
+          </p>
+
+          <p className="text-sm text-gray-400 mt-2">
+            Email:{" "}
+            <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=rajhillsconstructions@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-orange-500 hover:underline"
+>
+  rajhillsconstructions@gmail.com
+</a>
           </p>
         </div>
       </div>

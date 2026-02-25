@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+      className="scroll-mt-24 py-28 bg-linear-to-br from-gray-900 via-gray-800 to-gray-900"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* White Card */}
