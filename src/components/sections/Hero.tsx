@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white"
+      className="relative min-h-screen flex items-center text-white"
     >
       {/* Background Image */}
       <div
@@ -17,34 +17,41 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-          Residential & Commercial Construction
-          <br />
-          Built with Precision Since 2015.
-        </h1>
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Residential & Commercial Construction
+            <br />
+            <span className="text-orange-400">
+              Built with Precision Since 2015.
+            </span>
+          </h1>
 
-        <p className="mt-6 max-w-2xl space-y-6 text-gray-200 text-lg">
-          Raj Hills Construction is a trusted name in residential and commercial
-          development, delivering quality projects with integrity and precision.
-        </p>
+          <p className="mt-6 text-gray-200 text-lg leading-relaxed">
+            Raj Hills Construction delivers high-quality residential and
+            commercial projects with integrity, structural precision, and
+            long-term reliability.
+          </p>
 
-        {/* CTA Buttons */}
-        <div className="mt-8 flex gap-4">
-          <a
-            href="tel:+919560961031"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition"
-          >
-            Call Now
-          </a>
-          <a
-            href="https://wa.me/919560961031"
-            target="_blank"
-            className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition"
-          >
-            WhatsApp
-          </a>
+          <div className="mt-8 flex gap-4">
+            <a
+              href="tel:+919560961031"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition"
+            >
+              Call Now
+            </a>
+
+            <a
+              href="https://wa.me/919560961031"
+              target="_blank"
+              className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+// end code
