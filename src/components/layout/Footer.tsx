@@ -71,7 +71,7 @@ export default function Footer() {
               href="tel:+919079976593"
               className="text-orange-500 hover:underline"
             >
-              +91 95609 61031
+              +91 9079976593
             </a>
           </p>
 

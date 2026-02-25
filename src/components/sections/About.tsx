@@ -24,25 +24,25 @@ export default function About() {
           </div>
 
           {/* Right Stats */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
+          <div className="grid grid-cols-2 gap-8 shadow-md hover:shadow-lg transition">
+            <div className="p-8 bg-gray-100 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-bold text-orange-500">10+</h3>
               <p className="mt-2 text-gray-700 text-sm">
                 Years of Industry Experience
               </p>
             </div>
 
-            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-100 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-bold text-orange-500">Active</h3>
               <p className="mt-2 text-gray-700 text-sm">Company Status</p>
             </div>
 
-            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-100 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-bold text-orange-500">Delhi</h3>
               <p className="mt-2 text-gray-700 text-sm">Registered Location</p>
             </div>
 
-            <div className="p-8 bg-gray-50 rounded-xl border hover:shadow-md transition">
+            <div className="p-8 bg-gray-100 rounded-xl border hover:shadow-md transition">
               <h3 className="text-2xl font-bold text-orange-500">Quality</h3>
               <p className="mt-2 text-gray-700 text-sm">
                 Focused Construction Approach
