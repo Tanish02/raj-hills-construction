@@ -50,17 +50,28 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <button onClick={() => handleNav("home")} className="flex items-center">
+        <button
+          onClick={() => handleNav("home")}
+          className="flex items-center gap-2"
+        >
           <Image
-            src="/logo-text.svg"
-            alt="Raj Hills Constructions"
-            width={160}
-            height={40}
+            src="/LOGO/logo.svg"
+            alt="Raj Hills Construction"
+            width={48}
+            height={48}
             priority
-            className="w-auto h-8 md:h-9"
+            className="w-11 h-11 object-contain"
           />
-        </button>
 
+          <div className="flex flex-col justify-center leading-[1.1]">
+            <span className="text-white font-semibold text-base">
+              Raj Hills
+            </span>
+            <span className="text-orange-500 text-[11px] tracking-[0.18em]">
+              CONSTRUCTION
+            </span>
+          </div>
+        </button>
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 relative">
           {sections.map((s) => (

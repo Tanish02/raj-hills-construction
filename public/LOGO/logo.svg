@@ -1,0 +1,19 @@
+<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8e7b5"></stop>
+      <stop offset="40%" stop-color="#d4af37"></stop>
+      <stop offset="70%" stop-color="#b8860b"></stop>
+      <stop offset="100%" stop-color="#f8e7b5"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- RH Letters -->
+  <text x="20" y="120" font-family="Times New Roman, serif" font-size="140" font-weight="bold" fill="url(#goldGradient)">
+    RH
+  </text>
+
+  <!-- Wave Stroke -->
+  <path d="M10 105 Q120 70 220 100 T310 95" stroke="url(#goldGradient)" stroke-width="10" fill="none" stroke-linecap="round"></path>
+</svg>

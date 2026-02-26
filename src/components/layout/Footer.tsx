@@ -4,18 +4,27 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Logo + Description */}
         <div>
-          <Image
-            src="/logo-text.svg"
-            alt="Raj Hills Constructions"
-            width={160}
-            height={40}
-            className="opacity-80"
-          />
+          <div className="flex items-center gap-3 mb-4">
+            <Image
+              src="/LOGO/logo.png"
+              alt="Raj Hills Construction"
+              width={45}
+              height={45}
+              className="w-10 h-10 object-contain"
+            />
 
-          <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+            <div className="leading-tight">
+              <p className="text-white font-semibold text-sm">Raj Hills</p>
+              <p className="text-orange-500 text-[10px] tracking-[0.25em]">
+                CONSTRUCTION
+              </p>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-400 leading-relaxed">
             Raj Hills Constructions is a professionally managed construction and
             real estate company delivering quality residential and commercial
             projects.
@@ -78,9 +87,7 @@ export default function Footer() {
           <p className="text-sm text-gray-400 mt-2">
             Email:{" "}
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=rajhillsconstructions@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:rajhillsconstructions@gmail.com"
               className="text-orange-500 hover:underline"
             >
               rajhillsconstructions@gmail.com
@@ -90,13 +97,11 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-xs text-gray-500">
-        © 2025 Raj Hills Constructions. All rights reserved.
+        © 2025 Raj Hills Construction. All rights reserved.
       </div>
     </footer>
   );
 }
 
 // end code
-{
-  /* temp logo SVG for now   */
-}
+// svg code for logo
