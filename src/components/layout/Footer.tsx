@@ -1,3 +1,4 @@
+"use client";
 import scrollToSection from "@/components/utils/scrollToSection";
 import Image from "next/image";
 
