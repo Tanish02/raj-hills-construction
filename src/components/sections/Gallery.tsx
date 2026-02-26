@@ -2,32 +2,28 @@
 
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export default function Gallery() {
-  const images = [
-    "/images/gallery/gallery-1.jpg",
-    "/images/gallery/gallery-2.jpg",
-    "/images/gallery/gallery-3.jpg",
-    "/images/gallery/gallery-4.jpg",
-  ];
+interface GalleryProps {
+  images?: string[];
+}
 
+export default function Gallery({ images = [] }: GalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const open = (index: number) => setActiveIndex(index);
   const close = () => setActiveIndex(null);
 
-  const next = () => {
+  const next = useCallback(() => {
     if (activeIndex === null) return;
     setActiveIndex((prev) => (prev! + 1) % images.length);
-  };
+  }, [activeIndex, images.length]);
 
-  const prev = () => {
+  const prev = useCallback(() => {
     if (activeIndex === null) return;
     setActiveIndex((prev) => (prev! - 1 + images.length) % images.length);
-  };
+  }, [activeIndex, images.length]);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
@@ -40,7 +36,7 @@ export default function Gallery() {
     }
 
     return () => window.removeEventListener("keydown", handleKey);
-  }, [activeIndex]);
+  }, [activeIndex, next, prev]);
 
   return (
     <section
@@ -49,21 +45,16 @@ export default function Gallery() {
     >
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Recent Work</h2>
-        <p className="text-gray-400 leading-relaxed max-w-3xl">
-          A selection of completed residential and commercial projects,
-          reflecting our commitment to structural precision and architectural
-          excellence.
-        </p>
       </div>
 
       {/* SLIDER */}
-      <div className="relative w-full overflow-hidden">
-        <div className="flex animate-scroll gap-8 w-max">
+      <div className="relative w-full overflow-hidden py-6">
+        <div className="flex animate-scroll gap-8">
           {[...images, ...images].map((src, index) => (
             <div
               key={index}
               onClick={() => open(index % images.length)}
-              className="relative w-[350px] h-[250px] flex-shrink-0 rounded-xl overflow-hidden cursor-pointer group"
+              className="relative w-[350px] h-[250px] shrink-0 rounded-xl overflow-hidden cursor-pointer group"
             >
               <Image
                 src={src}
@@ -71,17 +62,11 @@ export default function Gallery() {
                 fill
                 className="object-cover group-hover:scale-110 transition duration-500"
               />
-
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition text-sm">
-                  View Project
-                </span>
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Gradient fade effect */}
+        {/* Fade edges */}
         <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-gray-900 to-transparent pointer-events-none" />
         <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-gray-900 to-transparent pointer-events-none" />
       </div>
@@ -124,6 +109,4 @@ export default function Gallery() {
     </section>
   );
 }
-
 // end code
-//card view to slide showcase

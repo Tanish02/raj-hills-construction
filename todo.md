@@ -1,6 +1,7 @@
 [x] add mail in contact us section
 [x] config mailto: for crome
 [x] gallery updated
+[x] gallery card to slideshow
 [X] add new images to gallery
 [X] adjust tagline and description {opinion needed}
 [X] add socials Insta/Fb
