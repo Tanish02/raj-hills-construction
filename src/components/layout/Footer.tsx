@@ -9,18 +9,20 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/LOGO/logo.png"
+              src="/LOGO/logo.svg"
               alt="Raj Hills Construction"
-              width={45}
-              height={45}
+              width={40}
+              height={40}
               className="w-10 h-10 object-contain"
             />
 
-            <div className="leading-tight">
-              <p className="text-white font-semibold text-sm">Raj Hills</p>
-              <p className="text-orange-500 text-[10px] tracking-[0.25em]">
+            <div className="flex flex-col leading-[1.1]">
+              <span className="text-white font-semibold text-sm">
+                Raj Hills
+              </span>
+              <span className="text-orange-500 text-[10px] tracking-[0.18em]">
                 CONSTRUCTION
-              </p>
+              </span>
             </div>
           </div>
 
