@@ -1,5 +1,5 @@
-import { Project, projects } from "@/data/projects";
 import Image from "next/image";
+import { Project, projects } from "../../data/projects";
 
 export default function Projects() {
   const delhiProjects = projects.filter(
